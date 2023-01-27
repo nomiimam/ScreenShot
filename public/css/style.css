@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #123;
+}
+
+article {
+  margin: 20px;
+  padding: 20px;
+}
+img {
+  max-width: 100%;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  border: 4px solid #26c;
+  border-radius: 25px;
+  overflow: hidden;
+}
+input {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding: 10px 15px;
+}
+input:focus {
+  outline: 0;
+}
+button {
+  background-color: #26c;
+  border: 0;
+  padding: 10px 15px;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}

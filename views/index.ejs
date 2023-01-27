@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Screenshots</title>
+  </head>
+  <body>
+    <article>
+      <form onsubmit="doScreenshot(); return false;">
+        <input
+          type="url"
+          name="url"
+          placeholder="for example http://www.google.com"
+        />
+        <button type="submit">Screenshot</button>
+      </form>
+      <img alt="Your Screenshot" style="display: none" />
+    </article>
+    <script>
+      function doScreenshot() {
+        const url = document.querySelector("input").value;
+        if (!url) return;
+        const img = document.querySelector("img");
+        img.style.display = "none";
+        img.src = "/screenshot?url=" + encodeURIComponent(url);
+        img.onload = () => {
+          img.style.display = "block";
+        };
+      }
+    </script>
+  </body>
+</html>
